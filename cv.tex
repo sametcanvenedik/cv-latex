@@ -1,0 +1,182 @@
+\documentclass[10pt,a4paper]{article}
+
+% --------- PACKAGES ----------
+\usepackage[left=1cm,right=1cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+% --------- COLORS ----------
+\definecolor{sectionblue}{RGB}{0,0,130}
+
+% --------- HEADER ----------
+\setlength{\headheight}{30pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Sametcan Venedik -- Curriculum Vitae -- January 2026}
+\rhead{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --------- SECTION STYLE ----------
+\titleformat{\section}
+  {\color{sectionblue}\bfseries\Large}
+  {}
+  {0pt}
+  {}
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+% --------- LIST STYLE ----------
+\setlist[itemize]{noitemsep, topsep=0pt, partopsep=0pt, leftmargin=1.5em}
+
+% --------- CUSTOM COMMANDS ----------
+\newcommand{\cvitem}[1]{\\[-6pt] & \begin{itemize}#1\end{itemize}}
+
+% --------- DOCUMENT ----------
+\begin{document}
+\setlength{\parindent}{0pt} % No paragraph indentation
+\singlespacing % Sets line spacing to single (1.0)
+
+% --------- TWO-COLUMN LAYOUT ----------
+
+\begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+
+% --------- NAME BLOCK (RIGHT COLUMN ONLY) ----------
+&
+\begin{minipage}[t]{\linewidth}
+
+{\Huge \textbf{Sametcan Venedik}}\\[4pt]
+\begin{minipage}[t]{0.53\linewidth}
+Afyon Kocatepe University, Department of \\
+Mechatronics Engineer\\
+Çankaya, Ankara, Turkey
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.44\linewidth}
+    Phone: +90 (501) 241-1382\\
+    E-mail: \href{mailto:sametcanvenedik@gmail.com}{sametcanvenedik@gmail.com}
+\end{minipage}
+
+\end{minipage}
+\\
+\\
+% --------- EDUCATION ----------
+\textbf{B.Sc.} & \textbf{Afyon Kocatepe University}, Turkey\\
+2019--2024 & Mechatronics Engineering 
+\cvitem{
+    \item CGPA: 2.88/4.00
+    \item Academic focus: Control systems fundamentals, embedded systems basics, and introductory mechatronic system design
+    \item Graduation Project: Basic RFID-based personnel access control system.
+}\\
+\textbf{A.Sc.} & \textbf{Akdeniz University}, Turkey\\
+2017--2019 & Mechatronics 
+\cvitem{
+    \item CGPA: 3.86/4.00
+    \item Practice-oriented curriculum including PLC-based control exercises, actuator selection fundamentals, CNC machining basics, technical drawing, and introductory C programming}\\[-20pt]
+
+% --------- RESEARCH EXPERIENCE ----------
+& \section*{RESEARCH EXPERIENCE} \\
+2024--2025 & \textbf{Cherenkov Radiation–Based Imaging for Device Accuracy Verification
+}
+\cvitem{
+    \item Conducted applied R\&D on Cherenkov radiation–based optical imaging as an alternative method for device accuracy verification
+    \item Performed experimental measurements and evaluated the correlation between acquired radiation images and reference planning data
+    \item Designed experimental setups and test procedures to assess system accuracy and repeatability
+    \item Analyzed system performance by comparing measurement results with established calibration and verification methods
+}\\[-20pt]
+
+% --------- PROJECTS ----------
+& \section*{PROJECTS} \\
+2024--2025 & \textbf{Industrial Automation and Measurement System(Confidential)}\\
+& In-house R\&D Project, Physmart Solutions
+\cvitem{
+    \item Designed and developed a fully automated measurement and data processing system to reduce manual labor in internal operations
+    \item Led end-to-end system development, covering mechanical design, hardware selection, software architecture, and system integration
+    \item Designed the mechanical structure and Cartesian motion system using SolidWorks, including integration of linear mechanisms, switches, and peripheral devices
+    \item Developed a Python- and Qt-based central control software enabling real-time device control, data acquisition, processing, visualization, and automated decision-making
+    \item Implemented multi-process architecture with USB-based communication to STM32-controlled subsystems, real-time system monitoring, fault detection, and diagnostic logging, validated through continuous operational use
+}
+\\
+& \textbf{Cherenkov Radiation–Based Imaging System for Accuracy Verification}\\
+2024--2025 & TÜBİTAK 1507 R\&D Project, Physmart Solutions
+\cvitem{
+    \item Designed and developed a test and measurement system to verify radiotherapy device accuracy by comparing Cherenkov radiation images with treatment planning data
+    \item Led end-to-end system development, including mechanical design, prototyping, software development, and experimental validation
+    \item Designed a precision mechanical structure (0.1 mm rotational, 1 mm axial accuracy) using SolidWorks and supported design decisions through basic deflection analysis
+    \item Developed a Python- and Qt-based PC application for real-time image acquisition, processing, visualization, and data logging using OpenCV and third-party camera libraries
+    \item Validated system accuracy through experimental radiation measurements and comparison with established calibration methods
+}
+\\
+
+
+\end{tabularx}
+\newpage
+\begin{tabularx}{\textwidth}{@{}p{3cm} X@{}}
+
+% --------- PROFESSIONAL & ACADEMIC EXPERIENCE ----------
+& \section{PROFESSIONAL \& ACADEMIC EXPERIENCE}\\
+
+& \textbf{Physmart Solutions,} Turkey\\
+2024 -- Present  & Mechatronics Engineer    \\[-12pt]
+\cvitem{
+    \item Designed electromechanical devices from concept to serial production using SolidWorks
+    \item Supported R\&D-focused product development through prototyping and structural optimization
+    \item Executed mechanical redesign of an existing device, including enclosure re-modeling and external manufacturing coordination
+    \item Performed basic structural simulations to evaluate load-induced deflection
+    \item Conducted device-level debugging across mechanical assemblies, PCB designs (Altium), and STM32-based embedded software
+    \item Re-developed PC-based control software using Python and Qt, integrating hybrid local/remote data handling
+}
+\\[-6pt]
+
+& \textbf{BTECH Innovation,} Turkey\\
+2022 -- 2023  & Intern    \\[-12pt]      
+\cvitem{
+    \item Independently learned and applied nTopology for lattice and HEX structure design on training and evaluation parts
+    \item Designed HEX-based lightweight geometries using stress-informed design concepts for additive manufacturing studies
+    \item Gained hands-on experience in SLA, FDM, and SLS additive manufacturing processes, with active involvement in production workflows
+    \item Operated additive manufacturing systems and developed practical understanding of support strategies, build constraints, and material behavior
+    \item Conducted design-for-additive-manufacturing (DfAM) studies on non-production components to evaluate manufacturability and structural efficiency
+}\\[-20pt]
+
+% --------- REFERENCES ----------
+& \section{REFERENCES}\\
+& References available upon request\\
+
+% --------- SKILLS & ABILITIES ----------
+& \section{SKILLS \& ABILITIES}\\
+
+Programming &
+Python, C, MATLAB
+\\[5pt]
+
+Embedded &
+STM32, digital / analog I/O, PID control
+\\[5pt]
+
+Mechanical Design &
+SolidWorks, nTopology
+\\[5pt]
+
+Electronics Tools &
+Proteus, Altium Designer (debug level), Git
+\\[5pt]
+
+Manufacturing &
+Additive manufacturing (FDM, SLA, SLS)
+\\[5pt]
+
+Languages &
+Turkish (Native), English (Technical reading)
+
+
+\end{tabularx}
+
+\end{document}
+
+
